@@ -2,27 +2,53 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   16px !default;
+$base-font-family: "Museo Sans 500", "Open Sans Regular", Arial, sans-serif !default;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
+$column-unit:      55px !default;
 $spacing-unit:     30px !default;
 
+$margin-left:      $column-unit + $spacing-unit !default;
+$margin-right:     70px !default;
+
 $text-color:       #111 !default;
-$background-color: #fdfdfd !default;
+$text-grey:        #575656 !default;
+$blue-grey:        #5b6172 !default;
+$main-color:       #61c0bd !default;
+$border-color:     #26bdb9 !default;
+$background-color: #f1f2f5 !default;
 $brand-color:      #2a7ae2 !default;
+$hr-color:         #d9dadd !default;
+
+$bg-green-button:  #5bc0c3 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1260px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
+
+
+@font-face {
+  font-family: 'Museo Sans 500';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans 500'), url('./sass/MuseoSans_500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Museo Sans Rounded 300';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Rounded 300'), url('./sass/museosansrounded_300.woff') format('woff');
+}
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -41,8 +67,43 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+@mixin fixed_with{
+  max-width: $content-width;
+  margin: auto;
+}
+@mixin flex_centered{
+  display: flex;
+  align-items: center;
+}
+
+@mixin column_out_margin_0{
+  &:nth-child(1){
+    margin-left: 0;
+  }
+  &:nth-last-child(1){
+    margin-right: 0;
+  }
+  @include media-query($on-palm){
+    &{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin page-padding($minus: 0){
+  padding-left: $margin-left - $minus;
+  padding-right: $margin-right - $minus;
+  box-sizing: border-box;
+  @include media-query($on-laptop){
+    padding-left: ($margin-left - $minus) / 4;
+    padding-right: ($margin-right - $minus) / 4;
+  }
+}
+
 // Import partials.
 @import
 "./base",
-"./layout"
+"./layout",
+"./module"
 ;

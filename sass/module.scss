@@ -1,0 +1,36 @@
+.button, button{
+  color: $main-color;
+  border: 1px solid $main-color;
+  background: white;
+  border-radius: 2px;
+  padding: 9px 13px;
+  width: 58px;
+  line-height: 150%;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  width: 110px;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover{
+    color:  lighten($main-color, 15%);
+    border-color: lighten($main-color, 15%);
+  }
+}
+.button2{
+  @extend .button;
+  color: white;
+  background: $bg-green-button;
+  border-color: $border-color;
+  &:hover{
+    color: white;
+    border-color: lighten($border-color, 5%);
+    background: lighten($bg-green-button, 5%);
+  }
+}
+.hr1{
+  @include fixed_with;
+  border: none;
+  border-top: 1px solid $hr-color;
+}
+

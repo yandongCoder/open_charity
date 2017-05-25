@@ -2,4 +2,5 @@ name = openCharity
 description = Theme designed for open charity (demo)
 core= 7.x
 
+stylesheets[all][] = ./css/font-awesome.min.css
 stylesheets[all][] = style.css
