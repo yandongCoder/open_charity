@@ -45,6 +45,9 @@
     background-repeat: no-repeat;
     object-fit: cover;
   }
+  .banner-bg{
+    height: 460px;
+  }
   .banner-text{
     @include fixed_with;
     width: 100%;
@@ -308,7 +311,7 @@ h2.region-title, .region h2{
       @include media-query($on-laptop){
         flex-wrap: wrap;
       }
-      a, .item{
+      a, .item, .views-row{
         text-decoration: none;
         margin: 0 $spacing-unit / 2;
         @include column_out_margin_0;
