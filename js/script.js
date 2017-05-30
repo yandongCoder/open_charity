@@ -1,8 +1,9 @@
 $(document).ready(function(){
   $('.slider')
-    .css("display","flex")
+    .css("display","block")
     .slick({
     infinite: true,
+    lazyLoad: 'ondemand',
     dots: true,
     arrows: false,
     slidesToShow: 5,
