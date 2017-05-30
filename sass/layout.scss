@@ -34,8 +34,10 @@
   background: #111111;
   text-align: center;
   position: relative;
+  background: url("./images/banner-bg.png");
+  background-repeat: repeat-x;
   img{
-    height: 100%;
+    height: 460px;
     width: 100%;
     @include fixed_with;
     background-size: cover;
@@ -53,6 +55,7 @@
     color: white;
     text-align: center;
     h2{
+      color: white;
       font-size: 55px;
       font-family: "Museo Sans Rounded 300", "Open Sans Regular", Arial, sans-serif;
       text-transform: uppercase;
@@ -103,7 +106,7 @@
     margin-left: auto;
   }
 }
-h2.region-title{
+h2.region-title, .region h2{
   text-align: center;
   padding: 30px 0 20px 0;
   font-size: 26px;
@@ -235,80 +238,114 @@ h2.region-title{
   @include fixed_with;
   @include page-padding(50);
   .slider{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    >div{
-      flex-grow: 1;
-      flex-basis: 0;
-      text-align: center;
-      img{
-        transform: scale(0.85);
-      }
-    }
-  }
-  .slider-pages{
-    text-align: center;
-    margin-bottom:20px;
-    span{
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background: #acb1c1;
-      border-radius: 50%;
-      margin: 0 3px;
-      cursor: pointer;
-      &.current{
-        background: $main-color;
-      }
-    }
-  }
-
-}
-.blogs{
-  background: white;
-  position: relative;
-  @include fixed_with;
-  @include page-padding;
-  .column4{
-    display: flex;
-    justify-content: space-between;
-    @include media-query(900px){
+    display: none;
+    .slick-track{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-    }
-    a{
-      text-decoration: none;
-      margin: 0 $spacing-unit / 2;
-      @include column_out_margin_0;
-      @include media-query(900px){
-        flex-basis: 49%;
-        margin: 0;
-      }
-      ul{
-        list-style: none;
-        li{
-          color: $blue-grey;
-          font-family: "Open Sans Regular", Arial, sans-serif;
-          &.tittle{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: $main-color;
-            padding-bottom: 7px;
-            border-bottom: 1px solid #f2f2f2;
-            font-family: "Open Sans Semibold" , Arial, sans-serif;;
-          }
-          &.summary{
-            padding: 15px 0 20px 0;
-
-          }
-          &.time{
-            padding: 15px 0 35px 0;
-            border-top: 1px solid #f2f2f2;
+      >div{
+        flex-grow: 1;
+        flex-basis: 0;
+        text-align: center;
+        img{
+          display: inline-block;
+          transform: scale(0.85);
+          @include media-query($on-laptop){
+            width: 100%;
           }
         }
       }
+    }
+  }
+  .slick-dots{
+    margin-bottom:20px;
+    li{
+      margin: 0;
+      button:before{
+        color: #acb1c1;
+        opacity: 1;
+        font-size: 10px;
+      }
+      &.slick-active{
+        button:before{
+          color: $main-color;
+        }
+      }
+    }
+  }
+  //.slider-pages, .slick-dots{
+  //  text-align: center;
+  //  margin-bottom:20px;
+  //  li{
+  //    button:before{
+  //      display: inline-block;
+  //      width: 10px;
+  //      height: 10px;
+  //      background: #acb1c1;
+  //      border-radius: 50%;
+  //      margin: 0 3px;
+  //      cursor: pointer;
+  //    }
+  //    &.current{
+  //      background: $main-color;
+  //    }
+  //  }
+  //}
+
+}
+.blogs-wrap{
+  position: relative;
+  background: white;
+  @include fixed_with;
+  @include page-padding;
+  .blogs, .region-blogs{
+    .column4, .view-content{
+      display: flex;
+      justify-content: space-between;
+      @include media-query($on-laptop){
+        flex-wrap: wrap;
+      }
+      a, .item{
+        text-decoration: none;
+        margin: 0 $spacing-unit / 2;
+        @include column_out_margin_0;
+        width: calc(25% -  22.5px);
+
+        @include media-query($on-laptop){
+          flex-basis: 49%;
+          margin: 0;
+        }
+
+        ul{
+          list-style: none;
+          li{
+            color: $blue-grey;
+            font-family: "Open Sans Regular", Arial, sans-serif;
+            &.tittle{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: $main-color;
+              padding-bottom: 7px;
+              border-bottom: 1px solid #f2f2f2;
+              font-family: "Open Sans Semibold" , Arial, sans-serif;;
+            }
+            &.summary{
+              padding: 15px 0 20px 0;
+              min-height: 80px;
+
+            }
+            &.time{
+              padding: 15px 0 35px 0;
+              border-top: 1px solid #f2f2f2;
+            }
+          }
+        }
+      }
+    }
+    .pager{
+      display: none;
     }
   }
   .prev, .next{
@@ -332,6 +369,14 @@ h2.region-title{
   background: #7f7f82;
   height: 185px;
   margin-top: -185px;
+}
+.main-content{
+  @include fixed_with;
+  @include page-padding;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
 }
 .footer-wrap{
   height: 160px;

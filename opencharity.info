@@ -1,6 +1,16 @@
-name = openCharity
+name = Open Charity
 description = Theme designed for open charity (demo)
 core= 7.x
 
 stylesheets[all][] = ./css/font-awesome.min.css
+stylesheets[all][] = ./css/slick.css
+stylesheets[all][] = ./css/slick-theme.css
 stylesheets[all][] = style.css
+
+scripts[] = ./js/jquery-3.2.1.min.js
+scripts[] = ./js/slick.min.js
+scripts[] = ./js/script.js
+
+regions[banner] = Banner
+regions[blogs] = Blogs
+regions[content] = Content
