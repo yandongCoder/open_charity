@@ -25,10 +25,12 @@
   -->
 </div>
 <div class="next-event">
-  <a href="#" class="event">
-    <p><span class="tittle">Next Event: </span><span class="time">June 23rd 2016  18:30 - 21:00</span></p>
+  <div class="event">
+    <?php print render($page['event'])?>
+    <!--<p><span class="tittle">Next Event: </span><span class="time">June 23rd 2016  18:30 - 21:00</span></p>
     <p>Cancer Research UK, Angel Building, 407 St John Street, London EC1V 4AD</p>
-  </a>
+   `-->
+  </div>
   <button class="button2">REGISTER</button>
 </div>
 <div class="get-involved-wrap">

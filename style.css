@@ -129,8 +129,9 @@ body {
       margin-bottom: 5px; }
       .next-event .event p:first-child .tittle {
         color: #61c0bd; }
-      .next-event .event p:first-child .time {
-        color: #575656; }
+      .next-event .event p:first-child .time a {
+        color: #575656;
+        text-decoration: none; }
     .next-event .event p:last-child {
       color: #5b6172; }
   .next-event button {

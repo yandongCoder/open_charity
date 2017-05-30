@@ -12,5 +12,6 @@ scripts[] = ./js/slick.min.js
 scripts[] = ./js/script.js
 
 regions[banner] = Banner
+regions[event] = Event
 regions[blogs] = Blogs
 regions[content] = Content

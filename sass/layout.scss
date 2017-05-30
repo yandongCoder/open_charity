@@ -95,7 +95,9 @@
         color: $main-color;
       }
       .time{
-        color: $text-grey;
+        a{color: $text-grey;
+          text-decoration: none;
+        };
       }
     }
     p:last-child{
