@@ -97,6 +97,7 @@ body {
       text-transform: uppercase;
       font-weight: normal;
       margin: 75px 20px 20px 20px;
+      padding: 0;
       line-height: 120%; }
       @media screen and (max-width: 800px) {
         .banner .banner-text h2 {
@@ -275,7 +276,7 @@ h2.region-title, .region h2 {
           max-width: 200px;
           width: 100%; }
   .our-mission .hr1 {
-    margin: 50px 0 20px 0; }
+    margin: 50px 0 10px 0; }
 
 .our-members {
   max-width: 1260px;
@@ -287,6 +288,8 @@ h2.region-title, .region h2 {
     .our-members {
       padding-left: 8.75px;
       padding-right: 5px; } }
+  .our-members h2 {
+    padding-bottom: 10px; }
   .our-members .slider {
     display: none; }
     .our-members .slider .slick-track {
@@ -304,8 +307,10 @@ h2.region-title, .region h2 {
           @media screen and (max-width: 800px) {
             .our-members .slider .slick-track > div img {
               width: 100%; } }
-  .our-members .slick-dots {
+  .our-members .slick-track {
     margin-bottom: 20px; }
+  .our-members .slick-dots {
+    margin: 30px 0 20px 0; }
     .our-members .slick-dots li {
       margin: 0; }
       .our-members .slick-dots li button:before {
