@@ -98,6 +98,9 @@ body {
       font-weight: normal;
       margin: 75px 20px 20px 20px;
       line-height: 120%; }
+      @media screen and (max-width: 800px) {
+        .banner .banner-text h2 {
+          margin: 0; } }
     .banner .banner-text p {
       font-family: "Open Sans Regular", Arial, sans-serif;
       font-size: 17px;
@@ -327,9 +330,6 @@ h2.region-title, .region h2 {
   .blogs-wrap .blogs .column4, .blogs-wrap .blogs .view-content, .blogs-wrap .region-blogs .column4, .blogs-wrap .region-blogs .view-content {
     display: flex;
     justify-content: space-between; }
-    @media screen and (max-width: 800px) {
-      .blogs-wrap .blogs .column4, .blogs-wrap .blogs .view-content, .blogs-wrap .region-blogs .column4, .blogs-wrap .region-blogs .view-content {
-        flex-wrap: wrap; } }
     .blogs-wrap .blogs .column4 a, .blogs-wrap .blogs .column4 .item, .blogs-wrap .blogs .column4 .views-row, .blogs-wrap .blogs .view-content a, .blogs-wrap .blogs .view-content .item, .blogs-wrap .blogs .view-content .views-row, .blogs-wrap .region-blogs .column4 a, .blogs-wrap .region-blogs .column4 .item, .blogs-wrap .region-blogs .column4 .views-row, .blogs-wrap .region-blogs .view-content a, .blogs-wrap .region-blogs .view-content .item, .blogs-wrap .region-blogs .view-content .views-row {
       text-decoration: none;
       margin: 0 15px;
@@ -344,7 +344,6 @@ h2.region-title, .region h2 {
           margin-right: 0; } }
       @media screen and (max-width: 800px) {
         .blogs-wrap .blogs .column4 a, .blogs-wrap .blogs .column4 .item, .blogs-wrap .blogs .column4 .views-row, .blogs-wrap .blogs .view-content a, .blogs-wrap .blogs .view-content .item, .blogs-wrap .blogs .view-content .views-row, .blogs-wrap .region-blogs .column4 a, .blogs-wrap .region-blogs .column4 .item, .blogs-wrap .region-blogs .column4 .views-row, .blogs-wrap .region-blogs .view-content a, .blogs-wrap .region-blogs .view-content .item, .blogs-wrap .region-blogs .view-content .views-row {
-          flex-basis: 49%;
           margin: 0; } }
       .blogs-wrap .blogs .column4 a ul, .blogs-wrap .blogs .column4 .item ul, .blogs-wrap .blogs .column4 .views-row ul, .blogs-wrap .blogs .view-content a ul, .blogs-wrap .blogs .view-content .item ul, .blogs-wrap .blogs .view-content .views-row ul, .blogs-wrap .region-blogs .column4 a ul, .blogs-wrap .region-blogs .column4 .item ul, .blogs-wrap .region-blogs .column4 .views-row ul, .blogs-wrap .region-blogs .view-content a ul, .blogs-wrap .region-blogs .view-content .item ul, .blogs-wrap .region-blogs .view-content .views-row ul {
         list-style: none; }

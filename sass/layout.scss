@@ -64,8 +64,10 @@
       text-transform: uppercase;
       font-weight: normal;
       margin: 75px 20px 20px 20px;
-
       line-height: 120%;
+      @include media-query($on-laptop){
+        margin: 0;
+      }
     }
     p{
       font-family: "Open Sans Regular", Arial, sans-serif;
@@ -308,9 +310,6 @@ h2.region-title, .region h2{
     .column4, .view-content{
       display: flex;
       justify-content: space-between;
-      @include media-query($on-laptop){
-        flex-wrap: wrap;
-      }
       a, .item, .views-row{
         text-decoration: none;
         margin: 0 $spacing-unit / 2;
@@ -318,7 +317,6 @@ h2.region-title, .region h2{
         width: calc(25% -  22.5px);
 
         @include media-query($on-laptop){
-          flex-basis: 49%;
           margin: 0;
         }
 
